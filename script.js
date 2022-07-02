@@ -30,7 +30,7 @@ function set_nextTheme(){
 
 function getTheme(){
     currentTheme=localStorage.getItem("theme");
-    if(currentTheme == "undefined")
+    if(currentTheme == "undefined" || currentTheme == "null")
     currentTheme = "themeOne";
     document.body.classList.add(currentTheme);
 }
