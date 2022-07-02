@@ -1,0 +1,229 @@
+.themeOne{
+    --bgColor : hsl(222, 26%, 31%);
+    --keypadColor:hsl(223, 31%, 20%);
+    --screenColor:hsl(224, 36%, 15%);
+    --numColor:hsl(30, 25%, 89%);
+    --speshKeyColor:hsl(225, 21%, 49%);
+    --speshKeyShadow:hsl(224, 28%, 35%);
+    --bodytextColor:white;
+    --keyTextColor:hsl(221, 14%, 31%);
+    --equalsColor:hsl(6, 63%, 50%);
+    --equalsColorShadow:hsl(6, 70%, 34%);
+    --dotPos:0.2em;
+    --numShadowColor: hsl(28, 16%, 65%);
+    --equalsTextColor:white;
+}
+.themeTwo{
+    --bodytextColor:hsl(60, 10%, 19%);
+    --equalsTextColor:white;
+    --bgColor : hsl(0, 0%, 90%);
+    --keypadColor: hsl(0, 5%, 81%);
+    --screenColor:hsl(0, 0%, 93%);
+    --speshKeyColor:hsl(185, 42%, 37%);
+    --equalsColor:hsl(25, 98%, 40%);
+    --equalsColorShadow:hsl(25, 99%, 27%);
+    --speshKeyShadow:hsl(185, 58%, 25%);
+    --keyTextColor:hsl(60, 10%, 19%);
+    --numColor:hsl(45, 7%, 89%);
+    --numColorShadow:hsl(35, 11%, 61%);
+    --dotPos:1.35em;
+    --numShadowColor: hsl(28, 16%, 65%);
+}
+.themeThree{
+    --bodytextColor:hsl(52, 100%, 62%);
+    --bgColor : hsl(268, 75%, 9%);
+    --keypadColor:hsl(268, 71%, 12%);
+    --screenColor:hsl(268, 71%, 12%);
+    --speshKeyColor:hsl(281, 89%, 26%);
+    --speshKeyShadow:  hsl(285, 91%, 52%);
+    --keyTextColor:hsl(52, 100%, 62%);
+    --equalsColor:hsl(176, 100%, 44%);
+    --equalsColorShadow:hsl(177, 92%, 70%);
+    --dotPos:2.7em;
+    --numColor:hsl(268, 47%, 21%);
+    --numShadowColor:hsl(290, 70%, 36%);
+    --equlalsTextColor:hsl(198, 20%, 13%);
+}
+body{
+    font-family: 'League Spartan', sans-serif;   
+    background: var(--bgColor); 
+    width: fit-content;
+    margin: 0 auto;
+}
+p{
+    color:var(--bodytextColor);
+    margin-top: 4em;
+    font-size:24px;
+
+}
+small{
+    color:var(--bodytextColor);
+    font-size:12px;
+    display: inline;
+    margin-left: 0.2em;
+}
+.theme{
+    margin-top: 6.5em;
+    display: flex;
+   
+
+}
+.theme-box{
+    display: grid;
+    grid-template-rows: repeat(2,1em);
+    margin-top: -0.9em;
+    margin-left: 3em;
+
+}
+.theme-num{
+    letter-spacing: 0.5em;
+    margin-left: 0.5em;
+}
+.theme-slider{
+    background-color: var(--keypadColor);
+    border-radius: 0.4em;
+    height: 1.2em;
+}
+.theme-dot{
+    background-color: var(--equalsColor);
+    width: 0.8em;
+    height: 0.8em;
+    border-radius: 50%;
+    margin-left: var(--dotPos);
+    margin-top: 0.2em;
+}   
+header{
+    display: flex;
+    justify-content: space-between;
+
+}
+button:hover,.theme-dot:hover{
+    filter:brightness(1.2);
+    cursor:pointer;
+}
+
+.result{
+    height: 1em;
+    padding: 0.7em;
+    background-color: var(--screenColor);
+    border-radius: 0.2em;
+  
+    color:var(--bodytextColor);
+    text-align: right;
+    font-size: 40px;
+}
+.main-grid{
+    background-color: var(--keypadColor);
+    margin-top: 1em;
+    width: 100%;
+    border-radius: 0.4em;
+    height: 25em;
+}
+.num-grid{
+    display: grid;
+    grid-template-columns: repeat(4,6em);
+    grid-template-rows: repeat(4,4.5em);
+    width: 23em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+}
+.num-grid>button{
+    width: 83%;
+    height: 60%;
+
+    border:none;
+}
+.num,.op,.decimal{
+    color:var(--keyTextColor);
+    font-size: 32px;
+    background-color: var(--numColor);
+    margin-top: 1em;
+    box-shadow: 2px 2px var(--numShadowColor);
+}
+button{
+ 
+    border-radius: 0.2em;
+    font-family: inherit;
+    padding-top: 0.2em;
+    border:none;
+}
+.del{
+    margin-top: 1.45em;
+}
+.spesh-key{
+
+    font-size: 22px;
+    background-color: var(--speshKeyColor);
+    color:white;
+    box-shadow: 2px 2px var(--speshKeyShadow);
+    
+}
+.reset,.equals{
+    width: 7.86em;
+    margin:0.5em;
+    font-size: 22px;
+    height: 2em;
+}
+.equals{
+    background-color: var(--equalsColor);
+    box-shadow: 2px 2px var(--equalsColorShadow);
+    color: var(--equalsTextColor);
+}
+.reset-grid{
+    display: flex;
+    width: 26em;
+    justify-content: center;
+}
+
+@media screen and (max-width:450px){ 
+    p{
+        margin-top:1.5em;
+        font-size: 36px;
+        margin-left: .3em;
+    }
+    .theme{
+        margin-top:4.3em;
+        margin-right: 1em;
+    }
+    small{
+        font-size: 14px;
+    }
+    .result{
+        width: 80%;
+        margin-left: 0.34em;
+    }
+    .main-grid{
+        width: 93%;
+        margin-left: 0.9em;
+        height:29em;
+    }
+    .num-grid{
+        grid-template-rows: repeat(4,5.5em);
+        grid-template-columns: repeat(4,5.5em);
+        margin-left: 2.15em;
+    }
+    .num-grid>button{
+        height: 75%;
+        width: 80%;
+    }
+
+    .reset-grid{
+        width: 91%;
+        margin-left: 1.25em;
+        
+    }
+    .reset,.equals{
+        height: 2.7em;
+    }
+    .num,.op,.decimal{
+        box-shadow: 4px 4px var(--numShadowColor);
+    }
+    .spesh-key{
+        box-shadow: 4px 4px var(--speshKeyShadow);
+        
+    }
+    .equals{
+        box-shadow: 4px 4px var(--equalsColorShadow);
+    }
+}

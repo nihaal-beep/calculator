@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel ="stylesheet" href="./styles.css">
+  <script src = "./script.js" defer></script>
+  <title>Calculator app</title>
+
+
+</head>
+<body >
+  <header>
+  <p>calc</p>
+    <div class="theme">
+      <small>THEME</small>
+      <div class="theme-box">
+        <small class="theme-num">1 2 3</small>
+        <div class="theme-slider">
+          <div class="theme-dot"></div>
+        </div>
+        
+      </div>
+    </div>
+</header>
+  <div class="result"></div>
+  <div class="main-grid">
+    <div class="num-grid">
+      <button class="num" data-val="7">7</button>
+      <button class="num" data-val="8">8</button>
+      <button class="num" data-val="9">9</button>
+      <button class="del spesh-key">DEL</button>
+      <button class="num" data-val="4">4</button>
+      <button class="num" data-val="5">5</button>
+      <button class="num" data-val="6">6</button>
+      <button class="op" data-val="+">+</button>
+      <button class="num" data-val="1">1</button>
+      <button class="num" data-val="2">2</button>
+      <button class="num" data-val="3">3</button>
+      <button class="op" data-val="-">-</button>
+      <button class="decimal" data-val=".">.</button>
+      <button class="num" data-val="0">0</button>
+      <button class="op" data-val="/">/</button>
+      <button class="op" data-val="*">x</button>
+    </div>
+    <div class="reset-grid">
+      <button class="reset spesh-key">RESET</button>
+      <button class="equals">=</button>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Nihaal Raichura</a>.
+  </div>
+</body>
+</html>
